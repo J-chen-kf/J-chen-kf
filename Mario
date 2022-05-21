@@ -1,0 +1,28 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    int n ;
+    do
+    {
+        n = get_int("What size?");
+    }
+    while ( n < 0 || n > 9 );
+
+    for (int i = 1; i <= n ; i++)
+    {
+        for (int h = 0 ; h < 8 - i ; h++)
+        {
+            printf(" ");
+        }
+        for (int j = 0; j < i ; j++ )
+        {
+         printf("#");
+        }
+
+        printf("\n");
+    }
+
+}
+
